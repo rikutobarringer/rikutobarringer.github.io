@@ -1,0 +1,23 @@
+<html>
+    <body>
+
+        <h1>Rikuto Trailer Rater</h1>
+        
+        <script type="text/javascript">
+            const options = {
+         method: 'GET',
+            headers: {
+            accept: 'application/json',
+            Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0M2M4NTA3Yzk4MTMyYzM5YTkyMzU0OTFhMTU2MTNkMSIsIm5iZiI6MTczMjU4MDY0MS44ODkzMDU2LCJzdWIiOiI2NzMzNTA4NzI5YWE4ZmYyNDRjMGVkYWUiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.DW-FtfcZrUGAO0yOF6XYDpuzV1aopxO-pzTjHX0pMiU'
+            }
+            };
+
+         fetch('https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1', options)
+         .then(res => res.json())
+         .then(res => console.log(res))
+         .catch(err => console.error(err));
+        
+ 
+         </body>
+     
+</html>
