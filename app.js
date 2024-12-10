@@ -44,7 +44,7 @@ async function handleMovieClick(movie) {
     const movieScore = castAndCrewRatings.reduce((sum, rating) => sum + rating.avgRating, 0) / castAndCrewRatings.length;
 
     let videoURL = '';
-    if (movieScore < 6) {
+    if (movieScore < 5) {
       videoURL = 'https://www.youtube.com/clip/UgkxxeiPjhFOtw7gJfrclGwbQ0xoMZeRW3Wm'; 
     } else if (movieScore <= 7) {
       videoURL = 'https://www.youtube.com/clip/UgkxUqMxppNWD4drncYv-R-FWEO54wrXTUQS';   
@@ -118,7 +118,7 @@ function showCastAndCrewScores(ratings) {
       <h4>${member.name} (${member.job})</h4>
       <img src="${member.photo}" alt="${member.name}"> 
       <p>Avg Rating: ${member.avgRating}</p>
-      <p>Explanation: The Weakest Links.</p>
+      <p>Explanation: The Weakest Links</p>
     `;
     castInfo.appendChild(memberDiv);
   });
@@ -129,7 +129,7 @@ function showCastAndCrewScores(ratings) {
       <h4>${member.name} (${member.job})</h4>
       <img src="${member.photo}" alt="${member.name}">
       <p>Avg Rating: ${member.avgRating}</p>
-      <p>Explanation: The Creme de La.</p>
+      <p>Explanation: The Creme de La Creme</p>
     `;
     castInfo.appendChild(memberDiv);
   });
