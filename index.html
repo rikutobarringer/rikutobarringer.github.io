@@ -1,7 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upcoming Movies</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<body style="background-color: rgba(130, 213, 228, 0.528)"></body>
+
+<h1>Rikuto's Upcoming Movies</h1>
+
+<div class="movie-container" id="movie-container"></div>
+
+<!-- Video Popup -->
+<div class="popup" id="popup">
+  <div class="popup-content" id="popup-content">
+    <h2>Movie Video</h2>
+    <video id="movie-video" controls></video>
+    <div id="movie-score"></div>
+    <div id="cast-crew-info"></div>
+    <button onclick="closePopup()">Close</button>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="app.js"></script>
+
 </body>
 </html>
