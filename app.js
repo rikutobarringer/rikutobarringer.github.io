@@ -106,13 +106,13 @@ function playVideo(url) {
 function showCastAndCrewScores(ratings) {
   ratings.sort((a, b) => b.avgRating - a.avgRating);
 
-  const lowestTwo = ratings.slice(-2);
-  const highestTwo = ratings.slice(0, 2);
+  const bums = ratings.slice(-2);
+  const chads = ratings.slice(0, 2);
 
   const castInfo = document.getElementById('cast-crew-info');
   castInfo.innerHTML = '';
 
-  lowestTwo.forEach(member => {
+  bums.forEach(member => {
     const memberDiv = document.createElement('div');
     memberDiv.innerHTML = `
       <h4>${member.name} (${member.job})</h4>
@@ -123,7 +123,7 @@ function showCastAndCrewScores(ratings) {
     castInfo.appendChild(memberDiv);
   });
 
-  highestTwo.forEach(member => {
+  chads.forEach(member => {
     const memberDiv = document.createElement('div');
     memberDiv.innerHTML = `
       <h4>${member.name} (${member.job})</h4>
