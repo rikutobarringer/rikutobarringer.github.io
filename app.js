@@ -57,7 +57,7 @@ async function handleMovieClick(movie) {
     setTimeout(() => {
       displayMovieScore(movieScore);
       showCastAndCrewScores(castAndCrewRatings);
-    }, 5000);  // Adjust based on video length
+    }, 5000);  // Time Before video should stop
   } catch (error) {
     console.error('Error fetching movie details:', error);
   }
